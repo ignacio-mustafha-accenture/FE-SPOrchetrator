@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
-import { Button, Checkbox, Divider, Input, LogoMark } from '@/shared/ui';
+import { Button, Card, Checkbox, Divider, Input, LogoMark } from '@/shared/ui';
 import { createClient } from '@/shared/lib/supabase/client';
 
 const loginSchema = z.object({
@@ -18,8 +18,6 @@ const loginSchema = z.object({
 });
 
 type FormValues = z.infer<typeof loginSchema>;
-
-const CARD = String.raw`bg-[var(--bg\/elevated,#181c23)] border border-[var(--border\/default,rgba(255,255,255,0.14))] border-solid flex flex-col gap-[var(--spacing-16,16px)] items-start w-full max-w-[420px] px-8 py-9 rounded-[var(--radius-card,16px)] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.4)]`;
 
 export function LoginForm(): React.JSX.Element {
   const t = useTranslations('auth.login');
@@ -51,19 +49,19 @@ export function LoginForm(): React.JSX.Element {
   };
 
   return (
-    <div className={CARD}>
+    <Card>
       <div className="flex flex-col gap-2 items-center justify-center w-full">
         <LogoMark
           className={String.raw`bg-[var(--accent,#a100ff)] flex items-center justify-center rounded-[var(--radius-logo,8px)] size-[32px]`}
           text="IQ"
         />
         <p
-          className={String.raw`font-semibold leading-normal text-[color:var(--text\/primary,#f0f2f5)] text-[length:var(--font\/size\/xl,15px)] text-center whitespace-nowrap`}
+          className={String.raw`font-semibold leading-normal text-[color:var(--text-primary,#f0f2f5)] text-[length:var(--font-size-xl,15px)] text-center whitespace-nowrap`}
         >
           S&amp;P Orchestrator
         </p>
         <p
-          className={String.raw`font-medium leading-normal text-[color:var(--text\/secondary,#8b92a0)] text-[length:var(--font\/size\/sm,12px)] text-center whitespace-nowrap`}
+          className={String.raw`font-medium leading-normal text-[color:var(--text-secondary,#8b92a0)] text-[length:var(--font-size-sm,12px)] text-center whitespace-nowrap`}
         >
           {t('subtitle')}
         </p>
@@ -101,7 +99,7 @@ export function LoginForm(): React.JSX.Element {
         {serverError && (
           <p
             className={clsx(
-              String.raw`font-normal leading-normal text-[color:var(--status\/error,#ef4444)] text-[length:var(--font\/size\/xs,11px)]`,
+              String.raw`font-normal leading-normal text-[color:var(--status-error,#ef4444)] text-[length:var(--font-size-xs,11px)]`,
             )}
           >
             {serverError}
@@ -121,6 +119,6 @@ export function LoginForm(): React.JSX.Element {
       <Button variant="Secondary" className="w-full">
         {t('sso')}
       </Button>
-    </div>
+    </Card>
   );
 }

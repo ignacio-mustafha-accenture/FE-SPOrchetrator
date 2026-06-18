@@ -24,7 +24,7 @@ const resetSchema = z
 
 type FormValues = z.infer<typeof resetSchema>;
 
-const CARD = String.raw`bg-[var(--bg\/elevated,#181c23)] border border-[var(--border\/default,rgba(255,255,255,0.14))] border-solid flex flex-col gap-[var(--spacing-16,16px)] items-start w-full max-w-[420px] px-8 py-9 rounded-[var(--radius-card,16px)] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.35)]`;
+const CARD = String.raw`bg-[var(--bg-elevated,#181c23)] border border-[var(--border-default,rgba(255,255,255,0.14))] border-solid flex flex-col gap-[var(--spacing-16,16px)] items-start w-full max-w-[420px] px-8 py-9 rounded-[var(--radius-card,16px)] shadow-[0px_8px_32px_0px_rgba(0,0,0,0.35)]`;
 
 function computeStrength(password: string): PasswordStrengthLevel | null {
   if (!password) return null;
@@ -77,12 +77,12 @@ export function ResetPasswordForm(): React.JSX.Element {
           text="IQ"
         />
         <p
-          className={String.raw`font-semibold leading-normal text-[color:var(--text\/primary,#f0f2f5)] text-[length:var(--font\/size\/xl,15px)] text-center whitespace-nowrap`}
+          className={String.raw`font-semibold leading-normal text-[color:var(--text-primary,#f0f2f5)] text-[length:var(--font-size-xl,15px)] text-center whitespace-nowrap`}
         >
           {t('title')}
         </p>
         <p
-          className={String.raw`font-medium leading-normal text-[color:var(--text\/secondary,#8b92a0)] text-[length:var(--font\/size\/sm,12px)] text-center whitespace-nowrap`}
+          className={String.raw`font-medium leading-normal text-[color:var(--text-secondary,#8b92a0)] text-[length:var(--font-size-sm,12px)] text-center whitespace-nowrap`}
         >
           {t('subtitle')}
         </p>
@@ -111,7 +111,7 @@ export function ResetPasswordForm(): React.JSX.Element {
         {serverError && (
           <p
             className={clsx(
-              String.raw`font-normal leading-normal text-[color:var(--status\/error,#ef4444)] text-[length:var(--font\/size\/xs,11px)]`,
+              String.raw`font-normal leading-normal text-[color:var(--status-error,#ef4444)] text-[length:var(--font-size-xs,11px)]`,
             )}
           >
             {serverError}

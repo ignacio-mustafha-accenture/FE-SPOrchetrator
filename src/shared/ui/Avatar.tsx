@@ -27,8 +27,8 @@ export function Avatar({ className, initials, src, size = 'S' }: AvatarProps) {
       )}
       <p
         className={clsx(
-          String.raw`font-bold leading-normal relative shrink-0 text-[color:var(--text\/on-accent,white)] text-center whitespace-nowrap`,
-          size === 'S' && String.raw`text-[length:var(--font\/size\/3xs,9px)]`,
+          String.raw`font-bold leading-normal relative shrink-0 text-[color:var(--text-on-accent,white)] text-center whitespace-nowrap`,
+          size === 'S' && String.raw`text-[length:var(--font-size-3xs,9px)]`,
         )}
       >
         {initials}
