@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useId } from 'react';
+import React, { forwardRef, useState, useId } from 'react';
 import clsx from 'clsx';
 
 type InputProps = {
@@ -10,22 +10,17 @@ type InputProps = {
   placeholder?: string;
   value?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  name?: string;
   errorMessage?: string;
   disabled?: boolean;
   id?: string;
 };
 
-export function Input({
-  className,
-  type = 'text',
-  label,
-  placeholder,
-  value,
-  onChange,
-  errorMessage,
-  disabled = false,
-  id,
-}: InputProps) {
+export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
+  { className, type = 'text', label, placeholder, value, onChange, onBlur, name, errorMessage, disabled = false, id },
+  ref,
+) {
   const [showPassword, setShowPassword] = useState(false);
   const generatedId = useId();
   const inputId = id ?? (label ? generatedId : undefined);
@@ -55,10 +50,13 @@ export function Input({
         )}
       >
         <input
+          ref={ref}
           id={inputId}
+          name={name}
           type={resolvedType}
           value={value}
           onChange={onChange}
+          onBlur={onBlur}
           disabled={disabled}
           placeholder={placeholder}
           className={clsx(
@@ -91,4 +89,4 @@ export function Input({
       )}
     </div>
   );
-}
+});
