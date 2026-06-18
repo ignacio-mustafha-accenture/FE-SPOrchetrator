@@ -16,7 +16,7 @@ export function Link({ href, children, className, target, rel }: LinkProps) {
       target={target}
       rel={rel}
       className={clsx(
-        String.raw`font-medium leading-normal text-[color:var(--accent,#a100ff)] text-[length:var(--font\/size\/md,13px)] whitespace-nowrap`,
+        String.raw`font-medium leading-normal text-[color:var(--accent,#a100ff)] text-[length:var(--font-size-md,13px)] whitespace-nowrap`,
         'hover:underline decoration-solid [text-underline-position:from-font]',
         className,
       )}

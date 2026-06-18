@@ -2,14 +2,49 @@
   "auth": {
     "login": {
       "title": "Iniciar sesión",
-      "submit": "Entrar",
+      "subtitle": "Inicia sesión en tu cuenta",
       "email": "Email",
-      "password": "Contraseña"
+      "emailPlaceholder": "usuario@accenture.com",
+      "password": "Contraseña",
+      "rememberMe": "Recuérdame",
+      "submit": "Entrar",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "sso": "Continuar con Accenture SSO",
+      "or": "o / or",
+      "errors": {
+        "invalidEmail": "Email inválido",
+        "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+        "generic": "Credenciales inválidas. Por favor intentá de nuevo."
+      }
     },
     "forgotPassword": {
       "title": "Recuperar contraseña",
-      "submit": "Enviar email",
-      "email": "Email"
+      "subtitle": "Ingresá tu email y te enviaremos instrucciones",
+      "email": "Email",
+      "emailPlaceholder": "usuario@accenture.com",
+      "submit": "Enviar instrucciones",
+      "backToLogin": "Volver al inicio de sesión",
+      "sentTitle": "Instrucciones enviadas",
+      "sentSubtitle": "Revisá tu bandeja de entrada",
+      "resendIn": "Reenviar en {seconds}s",
+      "resendNow": "Reenviar",
+      "errors": {
+        "invalidEmail": "Email inválido",
+        "generic": "Algo salió mal. Por favor intentá de nuevo."
+      }
+    },
+    "resetPassword": {
+      "title": "Nueva contraseña",
+      "subtitle": "Ingresá y confirmá tu nueva contraseña",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "submit": "Guardar contraseña",
+      "backToLogin": "Volver al inicio de sesión",
+      "errors": {
+        "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+        "passwordMismatch": "Las contraseñas no coinciden",
+        "generic": "Algo salió mal. Por favor intentá de nuevo."
+      }
     }
   },
   "home": {

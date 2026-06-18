@@ -2,14 +2,49 @@
   "auth": {
     "login": {
       "title": "Sign in",
-      "submit": "Sign in",
+      "subtitle": "Sign in to your account",
       "email": "Email",
-      "password": "Password"
+      "emailPlaceholder": "user@accenture.com",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "submit": "Sign in",
+      "forgotPassword": "Forgot password?",
+      "sso": "Continue with Accenture SSO",
+      "or": "o / or",
+      "errors": {
+        "invalidEmail": "Invalid email address",
+        "passwordMin": "Password must be at least 8 characters",
+        "generic": "Invalid credentials. Please try again."
+      }
     },
     "forgotPassword": {
       "title": "Reset password",
-      "submit": "Send email",
-      "email": "Email"
+      "subtitle": "Enter your email and we'll send you instructions",
+      "email": "Email",
+      "emailPlaceholder": "user@accenture.com",
+      "submit": "Send instructions",
+      "backToLogin": "Back to login",
+      "sentTitle": "Instructions sent",
+      "sentSubtitle": "Check your inbox",
+      "resendIn": "Resend in {seconds}s",
+      "resendNow": "Resend",
+      "errors": {
+        "invalidEmail": "Invalid email address",
+        "generic": "Something went wrong. Please try again."
+      }
+    },
+    "resetPassword": {
+      "title": "New password",
+      "subtitle": "Enter and confirm your new password",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "submit": "Save password",
+      "backToLogin": "Back to login",
+      "errors": {
+        "passwordMin": "Password must be at least 8 characters",
+        "passwordMismatch": "Passwords do not match",
+        "generic": "Something went wrong. Please try again."
+      }
     }
   },
   "home": {
