@@ -1,0 +1,19 @@
+{
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "submit": "Sign in",
+      "email": "Email",
+      "password": "Password"
+    },
+    "forgotPassword": {
+      "title": "Reset password",
+      "submit": "Send email",
+      "email": "Email"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome"
+  }
+}
