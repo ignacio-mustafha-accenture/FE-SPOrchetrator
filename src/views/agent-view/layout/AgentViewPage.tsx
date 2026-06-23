@@ -3,7 +3,9 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { useTransition, useState } from 'react';
 import { motion, type Variants } from 'framer-motion';
+
 import { SuggestionChip } from '@/shared/ui';
+
 import { createSession } from '../actions/createSession';
 import { sendMessage } from '../actions/sendMessage';
 import type { LogEntryData } from '../domain/entities/AgentLogEntry';

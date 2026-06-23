@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+
 import type { ChatMessage } from '../../domain/entities/ChatMessage';
 import { ChatMessageBubble } from './ChatMessageBubble';
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+
 import type { LogEntryData } from '../../domain/entities/AgentLogEntry';
 
 export type { LogEntryData };

@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { LayoutDashboard } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+
 import { SidebarView } from './SidebarView';
 import type { ChatSession } from '../../domain/entities/ChatSession';
 

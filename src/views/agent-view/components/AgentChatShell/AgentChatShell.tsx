@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+
 import type { LogEntryData } from '../../domain/entities/AgentLogEntry';
 import { AgentChatHeader } from '../AgentChatHeader/AgentChatHeader';
 import { ExecutionLogPanel } from '../ExecutionLogPanel/ExecutionLogPanel';

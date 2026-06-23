@@ -3,7 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { motion, type Variants } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
+
 import { LogoMark, SidebarNavItem, SidebarSessionItem, SidebarUserChip } from '@/shared/ui';
+
 import type { ChatSession } from '../../domain/entities/ChatSession';
 
 // ── Animation variants ────────────────────────────────────────────────────────

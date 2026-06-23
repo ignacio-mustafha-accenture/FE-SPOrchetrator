@@ -1,6 +1,7 @@
 'use server';
 
 import { createClient } from '@/shared/lib/supabase/server';
+
 import { GetRecentSessionsUseCase } from '../application/use-cases/GetRecentSessionsUseCase';
 import { BEApiChatRepository } from '../infrastructure/adapters/BEApiChatRepository';
 import type { ChatSession } from '../domain/entities/ChatSession';
